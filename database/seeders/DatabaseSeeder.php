@@ -13,46 +13,46 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-       User::create([ 
-            'nama' => 'Administrator', 
-            'email' => 'admin@gmail.com', 
-            'role' => '1', 
-            'status' => 1, 
-            'hp' => '0812345678901', 
-            'password' => bcrypt('admin'), 
-        ]); 
-         User::create([ 
-            'nama' => 'abdul', 
-            'email' => 'abdul@gmail.com', 
-            'role' => '0', 
-            'status' => 1, 
-            'hp' => '081234567892', 
-            'password' => bcrypt('abdul'), 
-        ]); 
-         User::create([ 
-            'nama' => 'gofar', 
-            'email' => 'najjmi15@gmail.com', 
-            'role' => '2', 
-            'status' => 1, 
-            'hp' => '081234567892', 
-            'password' => bcrypt('gafar'), 
-         
-        ]); 
-            #data kategori 
-        Kategori::create([ 
-            'nama_kategori' => 'Brownies', 
-            ]); 
-        Kategori::create([ 
-            'nama_kategori' => 'Combro', 
-            ]); 
-        Kategori::create([ 
-            'nama_kategori' => 'Dawet', 
-            ]); 
-        Kategori::create([ 
-            'nama_kategori' => 'Mochi', 
-            ]); 
-        Kategori::create([ 
-            'nama_kategori' => 'Wingko', 
-            ]); 
+        User::create([
+            'nama' => 'Administrator',
+            'email' => 'admin@gmail.com',
+            'role' => '1',
+            'status' => 1,
+            'hp' => '0812345678901',
+            'password' => bcrypt('admin'),
+        ]);
+        User::create([
+            'nama' => 'abdul',
+            'email' => 'abdul@gmail.com',
+            'role' => '0',
+            'status' => 1,
+            'hp' => '081234567892',
+            'password' => bcrypt('abdul'),
+        ]);
+        User::create([
+            'nama' => 'gofar',
+            'email' => 'gofar@gmail.com',
+            'role' => '2',
+            'status' => 1,
+            'hp' => '081234567892',
+            'password' => bcrypt('gofar'),
+
+        ]);
+        #data kategori 
+        Kategori::create([
+            'nama_kategori' => 'Brownies',
+        ]);
+        Kategori::create([
+            'nama_kategori' => 'Combro',
+        ]);
+        Kategori::create([
+            'nama_kategori' => 'Dawet',
+        ]);
+        Kategori::create([
+            'nama_kategori' => 'Mochi',
+        ]);
+        Kategori::create([
+            'nama_kategori' => 'Wingko',
+        ]);
     }
 }

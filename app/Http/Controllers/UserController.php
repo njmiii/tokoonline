@@ -59,6 +59,16 @@ class UserController extends Controller
             return redirect()->back()->withErrors(['password' => 'Password harus terdiri dari kombinasi huruf besar, huruf kecil, angka, dan simbol karakter.']);
         }
     }
+   
+ public function edit(string $id) 
+    { 
+        $user = User::findOrFail($id); 
+        return view('backend.v_user.edit', [ 
+            'judul' => 'Ubah User', 
+            'edit' => $user 
+        ]); 
+    }
+
 
     public function destroy(string $id)
     {
@@ -114,7 +124,7 @@ class UserController extends Controller
         }
 
         $user->update($validatedData);
-        return redirect()->route('backend.v_user.index')->with('success', 'Data berhasil diperbaharui');
+        return redirect()->route('backend.user.index')->with('success', 'Data berhasil diperbaharui');
     }
     public function create()
     {

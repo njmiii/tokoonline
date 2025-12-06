@@ -6,7 +6,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <form action="{{ route('backend.user.update', $edit->id) }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('backend.user.update', $edit->id) }}" method="post"
+                        enctype="multipart/form-data">
                         @method('put')
                         @csrf
 
@@ -56,14 +57,11 @@
                                     <div class="form-group">
                                         <label>Status</label>
                                         <select name="status" class="form-control @error('status') is-invalid @enderror">
-                                            <option value=""
-                                                {{ old('status', $edit->status) == '' ? 'selected' : '' }}> -
+                                            <option value="" {{ old('status', $edit->status) == '' ? 'selected' : '' }}> -
                                                 Pilih Hak Akses -</option>
-                                            <option value="1"
-                                                {{ old('status', $edit->status) == '1' ? 'selected' : '' }}>
+                                            <option value="1" {{ old('status', $edit->status) == '1' ? 'selected' : '' }}>
                                                 Aktif</option>
-                                            <option value="0"
-                                                {{ old('status', $edit->status) == '0' ? 'selected' : '' }}>
+                                            <option value="0" {{ old('status', $edit->status) == '0' ? 'selected' : '' }}>
                                                 NonAktif</option>
                                         </select>
                                         @error('status')
@@ -116,7 +114,7 @@
                         <div class="border-top">
                             <div class="card-body">
                                 <button type="submit" class="btn btn-primary">Perbaharui</button>
-                                <a href="{{ route('backend.v_user.index') }}">
+                                <a href="{{ route('backend.user.index') }}">
                                     <button type="button" class="btn btn-secondary">Kembali</button>
                                 </a>
                             </div>

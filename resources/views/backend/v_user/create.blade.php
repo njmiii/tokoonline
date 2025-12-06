@@ -100,7 +100,7 @@
                 <div class="border-top">
                     <div class="card-body">
                         <button type="submit" class="btn btn-primary">Simpan</button>
-                        <a href="{{ route('backend.v_user.index') }}" class="btn btn secondary">Kembali
+                        <a href="{{ route('backend.user.index') }}" class="btn btn secondary">Kembali
                         </a>
                     </div>
                 </div>
